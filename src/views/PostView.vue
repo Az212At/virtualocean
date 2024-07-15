@@ -20,8 +20,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div v-if="isLoading === false" class="posts-page">
-    <PostCard v-for="post in posts" :key="post.id" :post="post" />
+  <div class="posts-page">
+    <template v-if="isLoading === false">
+      <PostCard v-for="post in posts" :key="post.id" :post="post" />
+    </template>
+
+    <span v-else class="icon-loader" />
   </div>
 </template>
 
@@ -33,5 +37,16 @@ onMounted(() => {
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
+  position: relative;
+
+  .icon-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #969696;
+    width: 24px;
+    height: 24px;
+  }
 }
 </style>

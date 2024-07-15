@@ -19,6 +19,8 @@ defineComponent({
 <style lang="scss" scoped>
 .main-layout {
   height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr;
 
   > nav {
     height: 100px;
