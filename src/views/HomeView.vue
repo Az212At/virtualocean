@@ -1,9 +1,14 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+<script lang="ts" setup>
+defineOptions({
+  name: "HomeView",
+});
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="home-view">HomeView</div>
 </template>
+
+<style lang="scss" scoped>
+.home-view {
+}
+</style>
