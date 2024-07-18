@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import MainLayout from "@/layouts/MainLayout.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,17 +6,27 @@ const router = createRouter({
     {
       path: "/",
       name: "MainLayout",
-      component: MainLayout,
+      component: () => import("@/layouts/MainLayout.vue"),
       children: [
         {
-          path: "/",
+          path: "/home",
           name: "HomeView",
           component: () => import("@/views/HomeView.vue"),
         },
         {
-          path: "/post",
-          name: "PostView",
-          component: () => import("@/views/PostView.vue"),
+          path: "/gallery",
+          name: "FishGallery",
+          component: () => import("@/views/FishGallery.vue"),
+        },
+        {
+          path: "/fish/:id",
+          name: "FishDetail",
+          component: () => import("@/views/FishDetail.vue"),
+        },
+        {
+          path: "/create-aquarium",
+          name: "CreateAquarium",
+          component: () => import("@/views/CreateAquarium.vue"),
         },
       ],
     },
