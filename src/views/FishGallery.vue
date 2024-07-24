@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
-import { useFishStore } from '@/state';
-import FishCard from '@/components/FishCard.vue';
+import { useFishStore } from "@/state";
+import FishCard from "@/components/FishCard.vue";
 
 const { fishList } = useFishStore();
 
-const sortKey = ref('name');
-const filterText = ref('');
+const sortKey = ref("name");
+const filterText = ref("");
 
 const sortedAndFilteredFish = computed(() => {
   return fishList.value
@@ -38,15 +38,15 @@ const sortedAndFilteredFish = computed(() => {
     </select>
     <label for="filter">Фильтр:</label>
     <input
-        id="filter"
-        v-model="filterText"
-        placeholder="Введите текст для фильтрации"
+      id="filter"
+      v-model="filterText"
+      placeholder="Введите текст для фильтрации"
     />
     <div class="fish-gallery">
       <FishCard
-          v-for="fish in sortedAndFilteredFish"
-          :key="fish.id"
-          :fish="fish"
+        v-for="fish in sortedAndFilteredFish"
+        :key="fish.id"
+        :fish="fish"
       />
     </div>
   </div>

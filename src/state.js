@@ -14,4 +14,3 @@ export const useFishStore = () => {
     addFish,
   };
 };
-ч
