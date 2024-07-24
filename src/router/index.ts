@@ -19,11 +19,6 @@ const router = createRouter({
           component: () => import("@/views/FishGallery.vue"),
         },
         {
-          path: "/fish/:id",
-          name: "FishDetail",
-          component: () => import("@/views/FishDetail.vue"),
-        },
-        {
           path: "/create-aquarium",
           name: "CreateAquarium",
           component: () => import("@/views/CreateAquarium.vue"),

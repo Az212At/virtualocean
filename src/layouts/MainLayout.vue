@@ -12,9 +12,6 @@ import { RouterLink } from "vue-router";
         <RouterLink :to="{ name: 'FishGallery' }" class="nav-link">
           Галерея
         </RouterLink>
-        <RouterLink :to="{ name: 'FishDetail' }" class="nav-link">
-          Детали
-        </RouterLink>
         <RouterLink :to="{ name: 'CreateAquarium' }" class="nav-link">
           Аквариум
         </RouterLink>
@@ -32,10 +29,12 @@ import { RouterLink } from "vue-router";
   height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 
   > header {
-    background-color: aqua;
+    background-color: rgba(255, 255, 255, 0.8);
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 0 12px;
   }
@@ -62,7 +61,7 @@ import { RouterLink } from "vue-router";
   }
 
   > footer {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8);
     color: white;
     text-align: center;
     padding: 10px 0;
