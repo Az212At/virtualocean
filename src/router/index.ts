@@ -13,16 +13,6 @@ const router = createRouter({
           name: "HomeView",
           component: () => import("@/views/HomeView.vue"),
         },
-        {
-          path: "/gallery",
-          name: "FishGallery",
-          component: () => import("@/views/FishGallery.vue"),
-        },
-        {
-          path: "/create-aquarium",
-          name: "CreateAquarium",
-          component: () => import("@/views/CreateAquarium.vue"),
-        },
       ],
     },
   ],

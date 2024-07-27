@@ -9,12 +9,6 @@ import { RouterLink } from "vue-router";
         <RouterLink :to="{ name: 'HomeView' }" class="nav-link">
           Главная
         </RouterLink>
-        <RouterLink :to="{ name: 'FishGallery' }" class="nav-link">
-          Галерея
-        </RouterLink>
-        <RouterLink :to="{ name: 'CreateAquarium' }" class="nav-link">
-          Аквариум
-        </RouterLink>
       </nav>
     </header>
     <main>
